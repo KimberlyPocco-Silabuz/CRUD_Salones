@@ -1,5 +1,5 @@
-#Añadir el archivo .env
-Agregar al contenido del archivo .env
+# Añadir el archivo .env
+Crear a la altura de la raiz del proyecto el archivo .env con el siguiente contenido
 ```bash
 FLASK_APP = main.py
 FLASK_DEBUG = 1
