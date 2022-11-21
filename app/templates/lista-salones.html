@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>LISTAR SALONES</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">aula</th>
+      <th scope="col">Hora Entrada</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for salon in salones %}
+    <tr>
+      <td>{{ salon.id }} </td>
+      <td>{{ salon.aula }} </td>
+      <td>{{ salon.horaEntrada }} </td>
+      <td>
+
+        <a href="/actualizar/{{salon.id}}"  class="btn btn-primary btn-sm">Actualizar</a>
+        <a href="/eliminar/{{salon.id}}" onclick="return confirm('Estas seguro de eliminar el salón seleccionado?')"
+          class="btn btn-danger btn-sm">Eliminar</a>
+
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+<div>
+  <a href="{{ url_for('index') }}">Regresar a crear salones</a>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Actualizar los campos del salón: {{salon.id}}</h1>
+<form method="POST">
+  <div class="form-group">
+    <label>Aula</label>
+    <input value="{{salon.aula}}" type="text" name="aula" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label>Hora Entrada</label>
+    <input value="{{salon.horaEntrada}}" type="text" name="horaEntrada" class="form-control"
+     >
+  </div>
+  <button type="submit" class="btn btn-success">Actualizar</button>
+
+</form>
+{% endblock %}
