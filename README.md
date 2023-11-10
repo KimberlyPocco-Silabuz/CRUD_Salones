@@ -1,4 +1,5 @@
-# Añadir el archivo .env
+# Consideraciones para la instalación
+ ## Añadir el archivo .env
 Crear a la altura de la raiz del proyecto el archivo .env con el siguiente contenido
 ```bash
 FLASK_APP = main.py
